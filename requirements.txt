@@ -1,4 +1,6 @@
 fastapi
 uvicorn
 mysql-connector-python
-ollama
+pandas
+requests
+aiohttp
