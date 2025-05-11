@@ -1,21 +1,27 @@
-# Chat RAG Agent
+
 
 ## Overview
-An agent-based system powered by a local LLM that retrieves and reasons over US federal register data.
-
-## Features
-- Data pipeline to fetch and load federal register documents.
-- MySQL backend.
-- Local LLM (Ollama) with tool use.
-- FastAPI + minimal HTML UI.
+A simple RAG-based chatbot that fetches, cleans, and loads federal data into MySQL and enables chat queries using LLM.
 
 ## Setup
-1. Clone repo
-2. Create `.env` file (example included)
-3. Run MySQL and setup schema from `database/schema.sql`
-4. Run `python data_pipeline/fetch_federal_data.py`
-5. Start FastAPI: `uvicorn api.main:app --reload`
+1. Clone the repo.
+2. Set MySQL credentials in `.env`.
+3. Run `pip install -r requirements.txt`
+4. Launch with `uvicorn api.main:app --reload`
 
-## Notes
-- Make sure Ollama is running locally.
-- Use `qwen:1b` or similar small models.
+## Folder Structure
+- `data_pipeline/`: Data download and preprocessing.
+- `database/`: SQL schema.
+- `agent/`: Core RAG logic.
+- `api/`: FastAPI endpoint.
+- `ui/`: Basic HTML frontend.
+- `utils/`: Async fetchers.
+
+## Usage
+Visit `localhost:8000` and use the chat UI.
+
+---
+
+Let me know if you want this exported as a downloadable `.zip` next.
+
+
